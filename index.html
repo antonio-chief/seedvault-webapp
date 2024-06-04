@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="notification">4</div>
+                <div class="name">Samantha</div>
+                <div class="email">samantha@email.com</div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li id="dashboard-button">Dashboard</li>
+                    <li id="expenses-button" class="active">Expenses</li>
+                    <li id="wallets-button">Wallets</li>
+                    <li id="summary-button">Summary</li>
+                    <li id="accounts-button">Accounts</li>
+                    <li id="settings-button">Settings</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="dashboard-section" class="content-section" style="display:none;">
+                <header class="header">
+                    <h1>Dashboard</h1>
+                    <p>Overview of your activities</p>
+                </header>
+                <section class="chart">
+                    <!-- Placeholder for chart -->
+                </section>
+                <!-- Additional dashboard content goes here -->
+            </section>
+            <section id="expenses-section" class="content-section">
+                <header class="header">
+                    <h1>Expenses</h1>
+                    <p>01 - 25 March, 2020</p>
+                </header>
+                <section class="chart">
+                    <!-- Placeholder for chart -->
+                </section>
+                <section class="expenses-today">
+                    <h2>Today</h2>
+                    <ul>
+                        <li class="expense-item">
+                            <div class="icon grocery"></div>
+                            <div class="details">
+                                <div class="category">Grocery</div>
+                                <div class="time">5:12 pm • Belanja di pasar</div>
+                            </div>
+                            <div class="amount">-326.800</div>
+                        </li>
+                        <li class="expense-item">
+                            <div class="icon transportation"></div>
+                            <div class="details">
+                                <div class="category">Transportation</div>
+                                <div class="time">5:12 pm • Naik bus umum</div>
+                            </div>
+                            <div class="amount">-15.000</div>
+                        </li>
+                        <li class="expense-item">
+                            <div class="icon housing"></div>
+                            <div class="details">
+                                <div class="category">Housing</div>
+                                <div class="time">5:12 pm • Bayar Listrik</div>
+                            </div>
+                            <div class="amount">-185.750</div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="expenses-yesterday">
+                    <h2>Monday, 23 March 2020</h2>
+                    <ul>
+                        <li class="expense-item">
+                            <div class="icon food-and-drink"></div>
+                            <div class="details">
+                                <div class="category">Food and Drink</div>
+                                <div class="time">5:12 pm • Makan Steak</div>
+                            </div>
+                            <div class="amount">-156.000</div>
+                        </li>
+                        <li class="expense-item">
+                            <div class="icon entertainment"></div>
+                            <div class="details">
+                                <div class="category">Entertainment</div>
+                                <div class="time">5:12 pm • Nonton Bioskop</div>
+                            </div>
+                            <div class="amount">-35.200</div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+        <aside class="right-sidebar">
+            <section class="summary">
+                <h2>Where your money go?</h2>
+                <ul>
+                    <li>
+                        <span>Food and Drinks</span>
+                        <span class="amount">872.400</span>
+                    </li>
+                    <li>
+                        <span>Shopping</span>
+                        <span class="amount">1.378.200</span>
+                    </li>
+                    <li>
+                        <span>Housing</span>
+                        <span class="amount">928.500</span>
+                    </li>
+                    <li>
+                        <span>Transportation</span>
+                        <span class="amount">420.700</span>
+                    </li>
+                    <li>
+                        <span>Vehicle</span>
+                        <span class="amount">520.000</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="tips">
+                <h2>Save more money</h2>
+                <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                <button>View Tips</button>
+            </section>
+        </aside>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

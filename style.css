@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f7fc;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #181818;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile {
+    text-align: center;
+    position: relative;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.notification {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 12px;
+}
+
+.name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.email {
+    color: #888888;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #888888;
+    transition: background-color 0.3s;
+}
+
+.menu li:hover, .menu .active {
+    background-color: #333333;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    color: #888888;
+    margin: 5px 0 0;
+}
+
+.chart {
+    background-color: #e0e8f9;
+    height: 150px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.expenses-today, .expenses-yesterday {
+    margin-bottom: 20px;
+}
+
+.expenses-today h2, .expenses-yesterday h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.expense-item .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.expense-item .icon.grocery { background-color: #1abc9c; }
+.expense-item .icon.transportation { background-color: #9b59b6; }
+.expense-item .icon.housing { background-color: #f39c12; }
+.expense-item .icon.food-and-drink { background-color: #e74c3c; }
+.expense-item .icon.entertainment { background-color: #2ecc71; }
+
+.expense-item .details {
+    flex: 1;
+    color: #555555;
+}
+
+.expense-item .category {
+    font-weight: bold;
+}
+
+.expense-item .time {
+    color: #888888;
+    font-size: 12px;
+}
+
+.expense-item .amount {
+    font-weight: bold;
+    color: #333333;
+}
+
+.right-sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+}
+
+.summary h2, .tips h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.summary ul {
