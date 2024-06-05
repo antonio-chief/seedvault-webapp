@@ -3,133 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Smart Storage Solutions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
-            <div class="profile">
-                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-                <div class="notification">4</div>
-                <div class="name">Samantha</div>
-                <div class="email">samantha@email.com</div>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                <span>Smart Storage</span>
             </div>
             <nav class="menu">
                 <ul>
-                    <li id="dashboard-button">Dashboard</li>
-                    <li id="expenses-button" class="active">Expenses</li>
-                    <li id="wallets-button">Wallets</li>
-                    <li id="summary-button">Summary</li>
-                    <li id="accounts-button">Accounts</li>
-                    <li id="settings-button">Settings</li>
+                    <li id="dashboardBtn" class="active">Dashboard</li>
+                    <li id="storageBtn">Storage</li>
+                    <li id="reportsBtn">Reports</li>
+                    <li id="settingsBtn">Settings</li>
                 </ul>
             </nav>
         </aside>
         <main class="main-content">
-            <section id="dashboard-section" class="content-section" style="display:none;">
-                <header class="header">
-                    <h1>Dashboard</h1>
-                    <p>Overview of your activities</p>
-                </header>
-                <section class="chart">
-                    <!-- Placeholder for chart -->
-                </section>
-                <!-- Additional dashboard content goes here -->
+            <header class="header">
+                <div class="search">
+                    <input type="text" placeholder="Search for data & reports...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile">
+                    <img src="user.jpg" alt="User">
+                    <span>John Doe</span>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-cog"></i>
+                    </div>
+                </div>
+            </header>
+            <section id="overview" class="section">
+                <h1>Overview</h1>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Seeds in Storage</h2>
+                        </div>
+                        <div class="card-content">
+                            <h3>10368</h3>
+                            <p>seeds</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Germination Rate</h2>
+                        </div>
+                        <div class="card-content">
+                            <h3>85%</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Seeds Distributed</h2>
+                        </div>
+                        <div class="card-content">
+                            <h3>1,086</h3>
+                            <p>this week</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Total Distribution</h2>
+                        </div>
+                        <div class="card-content">
+                            <h3>388,688</h3>
+                            <p>seeds</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="expenses-section" class="content-section">
-                <header class="header">
-                    <h1>Expenses</h1>
-                    <p>01 - 25 March, 2020</p>
-                </header>
-                <section class="chart">
-                    <!-- Placeholder for chart -->
-                </section>
-                <section class="expenses-today">
-                    <h2>Today</h2>
+            <section id="storage" class="section" style="display: none;">
+                <h1>Storage Information</h1>
+                <div class="storage-cards">
+                    <div class="storage-card">
+                        <h2>Storage Unit 1</h2>
+                        <p>Temperature: 18°C</p>
+                        <p>Humidity: 45%</p>
+                        <p>Seeds Stored: 5,000</p>
+                    </div>
+                    <div class="storage-card">
+                        <h2>Storage Unit 2</h2>
+                        <p>Temperature: 20°C</p>
+                        <p>Humidity: 50%</p>
+                        <p>Seeds Stored: 3,500</p>
+                    </div>
+                    <div class="storage-card">
+                        <h2>Storage Unit 3</h2>
+                        <p>Temperature: 16°C</p>
+                        <p>Humidity: 40%</p>
+                        <p>Seeds Stored: 7,200</p>
+                    </div>
+                </div>
+            </section>
+            <section id="reports" class="section" style="display: none;">
+                <h1>Reports</h1>
+                <div class="recent-reports">
+                    <h2>Recent Reports</h2>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart-by-percent">
+                    <h2>Storage Efficiency</h2>
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </section>
+            <section id="settings" class="section" style="display: none;">
+                <h1>Settings</h1>
+                <div class="settings-content">
+                    <p>Settings options will be displayed here.</p>
                     <ul>
-                        <li class="expense-item">
-                            <div class="icon grocery"></div>
-                            <div class="details">
-                                <div class="category">Grocery</div>
-                                <div class="time">5:12 pm • Belanja di pasar</div>
-                            </div>
-                            <div class="amount">-326.800</div>
-                        </li>
-                        <li class="expense-item">
-                            <div class="icon transportation"></div>
-                            <div class="details">
-                                <div class="category">Transportation</div>
-                                <div class="time">5:12 pm • Naik bus umum</div>
-                            </div>
-                            <div class="amount">-15.000</div>
-                        </li>
-                        <li class="expense-item">
-                            <div class="icon housing"></div>
-                            <div class="details">
-                                <div class="category">Housing</div>
-                                <div class="time">5:12 pm • Bayar Listrik</div>
-                            </div>
-                            <div class="amount">-185.750</div>
-                        </li>
+                        <li>Profile Settings</li>
+                        <li>Account Settings</li>
+                        <li>Notification Settings</li>
+                        <li>Privacy Settings</li>
                     </ul>
-                </section>
-                <section class="expenses-yesterday">
-                    <h2>Monday, 23 March 2020</h2>
-                    <ul>
-                        <li class="expense-item">
-                            <div class="icon food-and-drink"></div>
-                            <div class="details">
-                                <div class="category">Food and Drink</div>
-                                <div class="time">5:12 pm • Makan Steak</div>
-                            </div>
-                            <div class="amount">-156.000</div>
-                        </li>
-                        <li class="expense-item">
-                            <div class="icon entertainment"></div>
-                            <div class="details">
-                                <div class="category">Entertainment</div>
-                                <div class="time">5:12 pm • Nonton Bioskop</div>
-                            </div>
-                            <div class="amount">-35.200</div>
-                        </li>
-                    </ul>
-                </section>
+                </div>
             </section>
         </main>
-        <aside class="right-sidebar">
-            <section class="summary">
-                <h2>Where your money go?</h2>
-                <ul>
-                    <li>
-                        <span>Food and Drinks</span>
-                        <span class="amount">872.400</span>
-                    </li>
-                    <li>
-                        <span>Shopping</span>
-                        <span class="amount">1.378.200</span>
-                    </li>
-                    <li>
-                        <span>Housing</span>
-                        <span class="amount">928.500</span>
-                    </li>
-                    <li>
-                        <span>Transportation</span>
-                        <span class="amount">420.700</span>
-                    </li>
-                    <li>
-                        <span>Vehicle</span>
-                        <span class="amount">520.000</span>
-                    </li>
-                </ul>
-            </section>
-            <section class="tips">
-                <h2>Save more money</h2>
-                <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                <button>View Tips</button>
-            </section>
-        </aside>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
