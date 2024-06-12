@@ -1,4 +1,5 @@
 # To run the React App
+`npm install`
 `npm start`
 available in [localhost:3000](http://localhost:3000/)
 

@@ -28,3 +28,31 @@ function App() {
 
 export default App;
 */
+// App.js
+import React from 'react';
+import './App.css';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Overview from './components/Overview';
+import Reports from './components/Reports';
+import Settings from './components/Settings';
+import Storage from './components/Storage';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <div className="App-body">
+        <Sidebar />
+        <main className="App-content">
+          <Overview />
+          <Reports />
+          <Settings />
+          <Storage />
+        </main>
+      </div>
+    </div>
+  );
+}
+
+export default App;
