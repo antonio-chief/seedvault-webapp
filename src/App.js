@@ -28,20 +28,29 @@ function App() {
 
 export default App;
 */
-
+// App.js
 import React from 'react';
-import Overview from './components/Overview';
 import './App.css';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Overview from './components/Overview';
+import Reports from './components/Reports';
+import Settings from './components/Settings';
+import Storage from './components/Storage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Smart Storage Solutions</h1>
-      </header>
-      <main>
-        <Overview />
-      </main>
+      <Header />
+      <div className="App-body">
+        <Sidebar />
+        <main className="App-content">
+          <Overview />
+          <Reports />
+          <Settings />
+          <Storage />
+        </main>
+      </div>
     </div>
   );
 }

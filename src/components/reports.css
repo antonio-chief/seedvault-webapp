@@ -20,4 +20,33 @@
     width: 100% !important;
     height: 400px !important;
   }
+  #lineChart {
+    width: 400px;
+    height: 300px;
+  }
   
+  p {
+    text-align: center;
+    color: red;
+  }
+  #lineChart, #doughnutChart {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .reports {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .recent-reports, .chart-by-percent {
+    width: 45%;
+  }
+  
+  p {
+    text-align: center;
+    color: red;
+  }
+    
